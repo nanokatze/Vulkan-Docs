@@ -72,7 +72,7 @@ branch of the member gitlab server.
         <tag name="QNX"         author="BlackBerry Limited"            contact="Mike Gorchak @mgorchak-blackberry"/>
         <tag name="JUICE"       author="Juice Technologies, Inc."      contact="David McCloskey @damcclos, Dean Beeler @canadacow"/>
         <tag name="FB"          author="Facebook, Inc"                 contact="Artem Bolgar @artyom17"/>
-        <tag name="NANOKATZEX"  author="My Little Extensions, Joe."    contact="Constantine Shablya @nanokatze"/>
+        <tag name="NANOKATZE"   author="My Little Extensions, Joe."    contact="Constantine Shablya @nanokatze"/>
     </tags>
 
     <types comment="Vulkan type definitions">
