@@ -1,0 +1,24 @@
+// Copyright (c) 2022 Constantine Shablya
+//
+// SPDX-License-Identifier: CC-BY-4.0
+
+include::{generated}/meta/{refprefix}VK_NANOKATZE_shared_virtual_memory.txt[]
+
+=== Other Extension Metadata
+
+*Last Modified Date*::
+    2022-01-15
+*Contributors*::
+  - Constantine Shablya
+
+=== Description
+
+This extension allows applications to allocate memory with matching host and
+device addresses.
+
+include::{generated}/interfaces/VK_NANOKATZE_shared_virtual_memory.txt[]
+
+=== Version History
+
+  * Revision 1, 2022-01-15 (Constantine Shablya)
+    - Initial revision
