@@ -72,6 +72,7 @@ branch of the member gitlab server.
         <tag name="QNX"         author="BlackBerry Limited"            contact="Mike Gorchak @mgorchak-blackberry"/>
         <tag name="JUICE"       author="Juice Technologies, Inc."      contact="David McCloskey @damcclos, Dean Beeler @canadacow"/>
         <tag name="FB"          author="Facebook, Inc"                 contact="Artem Bolgar @artyom17"/>
+        <tag name="NANOKATZEX"  author="My Little Extensions, Joe."    contact="Constantine Shablya @nanokatze"/>
     </tags>
 
     <types comment="Vulkan type definitions">
@@ -6577,6 +6578,12 @@ typedef void <name>CAMetalLayer</name>;
             <member values="VK_STRUCTURE_TYPE_PHYSICAL_DEVICE_LINEAR_COLOR_ATTACHMENT_FEATURES_NV"><type>VkStructureType</type> <name>sType</name></member>
             <member optional="true" noautovalidity="true"><type>void</type>*     <name>pNext</name></member>
             <member><type>VkBool32</type>                                        <name>linearColorAttachment</name></member>
+        </type>
+        <type category="struct" name="VkPhysicalDeviceSharedVirtualMemoryFeaturesNANOKATZE" structextends="VkPhysicalDeviceFeatures2,VkDeviceCreateInfo">
+            <member values="VK_STRUCTURE_TYPE_PHYSICAL_DEVICE_SHARED_VIRTUAL_MEMORY_FEATURES_NANOKATZE"><type>VkStructureType</type> <name>sType</name></member>
+            <member optional="true">const <type>void</type>*      <name>pNext</name></member>
+            <member><type>VkBool32</type>                         <name>sharedVirtualMemory</name></member>
+            <!--<member><type>VkBool32</type>                         <name>systemSharedVirtualMemory</name></member>-->
         </type>
     </types>
     <comment>Vulkan enumerant (token) definitions</comment>
@@ -17762,6 +17769,16 @@ typedef void <name>CAMetalLayer</name>;
             <require>
                 <enum value="0"                                         name="VK_SEC_EXTENSION_451_SPEC_VERSION"/>
                 <enum value="&quot;VK_SEC_extension_451&quot;"          name="VK_SEC_EXTENSION_451_EXTENSION_NAME"/>
+            </require>
+        </extension>
+        <extension name="VK_NANOKATZE_shared_virtual_memory" number="999" type="device" requiresCore="1.1" requires="VK_KHR_buffer_device_address" author="NANOKATZE" contact="Constantine Shablya @nanokatze" supported="vulkan">
+            <require>
+                <enum value="1"                                                name="VK_NANOKATZE_SHARED_VIRTUAL_MEMORY_SPEC_VERSION"/>
+                <enum value="&quot;VK_NANOKATZE_shared_virtual_memory&quot;"   name="VK_NANOKATZE_SHARED_VIRTUAL_MEMORY_EXTENSION_NAME"/>
+                <enum offset="0" extends="VkStructureType"                     name="VK_STRUCTURE_TYPE_PHYSICAL_DEVICE_SHARED_VIRTUAL_MEMORY_FEATURES_NANOKATZE"/>
+                <!-- use bit 9 to avoid conflicts with real extensions in near term -->
+                <enum bitpos="9" extends="VkMemoryAllocateFlagBits"            name="VK_MEMORY_ALLOCATE_SHARED_VIRTUAL_MEMORY_BIT_NANOKATZE"/>
+                <type                                                          name="VkPhysicalDeviceSharedVirtualMemoryFeaturesNANOKATZE"/>
             </require>
         </extension>
     </extensions>
